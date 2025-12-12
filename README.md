@@ -9,7 +9,7 @@ This project showcases practical Linux System Admin skills including log analysi
 log_report.sh is a Bash script that gathers different types of system logs:  
 1. System logs from "journalctl". journalctl gathers system and kernel logs from the systemd journal.
 2. Authentication logs (failed login attempts) via (/var/log/auth.log)
-3. Warning messages (counted via journalctl)  
+3. Warning messages (counted via `journalctl`)  
 4. It then formats them with headers and timestamps and saves everything into a consolidated file: log_report.txt  
 5. we can use cron job to schedules this script to run every 6 hours, automatically generating updated reports.  
 
@@ -23,14 +23,14 @@ This tool is useful for:
 1. Create the script: Save the code above as log_report.sh.
 2. Make it executable: Give the file execution permissions.
     <!-- Bash -->
-    $ chmod +x log_report.sh
+    `$ chmod +x log_report.sh`
 
 3. Automate with Cron: Open your crontab editor to schedule the script to run every 6 hours.
-    $ crontab -e
+    `$ crontab -e`
 
     Add the following line at the end of the file:
 
-    $ 0 */6 * * * /path/to/log_report.sh
+    `$ 0 */6 * * * /path/to/log_report.sh`
 4. You can also change path of the script (just replace `/path/to/` with your actual path):
 
 🛠️ Features 
