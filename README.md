@@ -1,12 +1,12 @@
 # **1️⃣ 📄 Automated Log Reporting Script (log_report.sh)**
  
-This is a simple but useful Linux system automated log reporting tool. This script gathers system activity,authentication failures and warning counts into a single easy-to-read formatted report.
+This is a simple but useful Linux system automated log reporting tool. This script gathers system activity, authentication failures and warning counts into a single easy-to-read formatted report.
 
 This project showcases practical Linux System Admin skills including log analysis, shell scripting, automation, and cron-based scheduling.  
 
 **🚀 Project Overview**
 
-logreport.sh is a Bash script that gathers different types of system logs:  
+log_report.sh is a Bash script that gathers different types of system logs:  
 1. System logs from "journalctl". journalctl gathers system and kernel logs from the systemd journal.
 2. Authentication logs (failed login attempts) via (/var/log/auth.log)
 3. Warning messages (counted via journalctl)  
@@ -22,16 +22,19 @@ This tool is useful for:
 ⚙️ How to Setup and Automate
 1. Create the script: Save the code above as log_report.sh.
 2. Make it executable: Give the file execution permissions.
-    # Bash
-    chmod +x logreport.sh
+    <!-- Bash -->
+    $ chmod +x log_report.sh
 
 3. Automate with Cron: Open your crontab editor to schedule the script to run every 6 hours.
-    crontab -e
+    $ crontab -e
+
     Add the following line at the end of the file:
-    0 */6 * * * /path/to/log_report.sh
-4. You can also change path of the script (just replace /path/to/ with your actual path):
+
+    $ 0 */6 * * * /path/to/log_report.sh
+4. You can also change path of the script (just replace `/path/to/` with your actual path):
 
 🛠️ Features 
+
 1️⃣ 
 ✔ Automatically collects:  
   Latest 20 system log entries  
@@ -44,7 +47,7 @@ This tool is useful for:
   Organized output  
 
 ✔ Stores results in:  
-  $HOME/log_reports/log_report.txt
+  `$HOME/log_reports/log_report.txt`
 
 ✔ Runs automatically every 6 hours using cron  
 
@@ -68,8 +71,18 @@ This is a simple Bash script that monitors CPU, memory, and disk usage, and disp
 
 This script demonstrates using fundamental Linux commands (top, free, df) combined with awk and basic Bash logic (loops and conditional statements) to create a real-time, terminal-based monitoring solution.
 
+```bash
+1. Make it executable:
+   $ chmod +x system_monitor.sh
+
+2. Run it on the terminal: 
+   $ ./system_monitor.sh
+```
 **Important** Stop execution: Press Ctrl+C to stop the continuous loop
 
 # *3️⃣ Colored system monitor tool*
 This script provides a much more intuitive, color-coded view of the system's health.
-This is the same monitoring tool but with a colour output so that it is easy to read. I defined variables like COLOR_GREEN, COLOR_RED, and COLOR_RESET using tput. This makes the code much cleaner than repeating the tput commands.
+
+This is the same monitoring tool but with a colour output so that it is easy to read.
+
+I defined variables like COLOR_GREEN, COLOR_RED, and COLOR_RESET using tput. This makes the code much cleaner than repeating the tput commands.
