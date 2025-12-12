@@ -6,11 +6,11 @@ This project showcases practical Linux System Admin skills including log analysi
 
 **🚀 Project Overview**
 
-log_report.sh is a Bash script that gathers different types of system logs:  
-1. System logs from "journalctl". journalctl gathers system and kernel logs from the systemd journal.
+`log_report.sh` is a Bash script that gathers different types of system logs:  
+1. System logs from `journalctl`. 'journalctl' gathers system and kernel logs from the systemd journal.
 2. Authentication logs (failed login attempts) via (/var/log/auth.log)
 3. Warning messages (counted via `journalctl`)  
-4. It then formats them with headers and timestamps and saves everything into a consolidated file: log_report.txt  
+4. It then formats them with headers and timestamps and saves everything into a consolidated file: `log_report.txt`  
 5. we can use cron job to schedules this script to run every 6 hours, automatically generating updated reports.  
 
 This tool is useful for: 
@@ -70,6 +70,7 @@ log_report/
 This is a simple Bash script that monitors CPU, memory, and disk usage, and displays an alert if any of them exceed a defined threshold.
 
 This script demonstrates using fundamental Linux commands (top, free, df) combined with awk and basic Bash logic (loops and conditional statements) to create a real-time, terminal-based monitoring solution.
+
 🚀 How to Run the Script
 
 ```bash
