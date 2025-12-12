@@ -66,10 +66,11 @@ log_report/
 └── log_report.txt      # Generated report 
 
 
-# **2️⃣ Linux System Monitor**
+# **2️⃣ 📝 Linux System Monitor**
 This is a simple Bash script that monitors CPU, memory, and disk usage, and displays an alert if any of them exceed a defined threshold.
 
 This script demonstrates using fundamental Linux commands (top, free, df) combined with awk and basic Bash logic (loops and conditional statements) to create a real-time, terminal-based monitoring solution.
+🚀 How to Run the Script
 
 ```bash
 1. Make it executable:
